@@ -28,7 +28,7 @@ def data_preprocess():
 
     data['Year'] = data['date'].dt.year
     data['Month'] = data['date'].dt.month
-    data['Week'] = data['date'].dt.week
+    data['Week'] = data['date'].dt.isocalendar().week
     # print(data)
 
     #Outlier Detection and Abnormalities
